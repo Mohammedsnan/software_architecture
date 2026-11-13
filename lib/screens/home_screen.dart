@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:software_architecture/models/activty_list_view_model.dart';
 import 'package:software_architecture/models/home_gridview_model.dart';
 import 'package:software_architecture/models/home_search_model.dart';
 
@@ -22,6 +23,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: 16.0),
               HomeSearchModel(),
               SizedBox(height: 16.0),
+              ActivityListViewModel()
               
             ],
           ),

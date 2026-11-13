@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:software_architecture/models/bachLlstmodel.dart';
 class ActivityListViewModel extends StatelessWidget {
   const ActivityListViewModel({
     super.key,
@@ -21,79 +22,70 @@ class ActivityListViewModel extends StatelessWidget {
               color: Colors.white.withOpacity(0.1),
               borderRadius: BorderRadius.circular(12),
             ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  height: 50,
-                  width: 50,
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.white.withOpacity(0.1),
-                  ),
-                  child: ClipOval(
-                    child: Image.network(
-                      "https://example.com/image.jpg",
-                      fit: BoxFit.cover,
-                      errorBuilder: (context, error, stackTrace) {
-                        return const Icon(
-                          Icons.error,
-                          color: Colors.blue,
-                          size: 36.0,
-                        );
-                      },
+            child: Center(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    height: 50,
+                    width: 50,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.white.withOpacity(0.1),
+                    ),
+                    child: ClipOval(
+                      child: Image.network(
+                        "https://example.com/image.jpg",
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          return const Icon(
+                            Icons.error,
+                            color: Colors.blue,
+                            size: 36.0,
+                          );
+                        },
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(width: 12),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        'Zaporizke Hwy 40 ',
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
+                  SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          'Zaporizke Hwy 40 ',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 12),
-                      Text(
-                        'Aug 24 • 7:10 PM',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 10,
+                        SizedBox(height: 12),
+                        Text(
+                          'Aug 24 • 7:10 PM',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 10,
+                          ),
                         ),
-                      ),
-                      Text(
-                        'UAH 0.00',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 12,
+                        Text(
+                          'UAH 0.00',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 12,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-                SizedBox(width: 12),
-                Container(
-                  padding: EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.white.withOpacity(0.1),
-                  ),
-                  child: Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
-                  ),
-                )
-              ],
+                  SizedBox(width: 12),
+                  BackListModel()
+                ],
+              ),
             ),
           );
         },
@@ -101,3 +93,4 @@ class ActivityListViewModel extends StatelessWidget {
     );
   }
 }
+
