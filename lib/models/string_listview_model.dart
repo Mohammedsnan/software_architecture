@@ -19,7 +19,6 @@ class StringListViewModel extends StatelessWidget {
           return Container(
             height: 100,
             padding: EdgeInsets.all(1),
-            
             child: Center(
               child: Row(
                 children: [

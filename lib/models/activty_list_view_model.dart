@@ -12,7 +12,7 @@ class ActivityListViewModel extends StatelessWidget {
       child: ListView.builder(
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
-        itemCount: 10,
+        itemCount: 3,
         itemBuilder: (context, index) {
           return Container(
             height: 100,
