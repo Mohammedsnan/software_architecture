@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:software_architecture/controllers/control_navigationbar.dart';
+import 'package:software_architecture/controllers/main_navigation_controller.dart';
 import 'package:software_architecture/screens/activity_screen.dart';
 import 'package:software_architecture/screens/home_screen.dart';
 import 'package:software_architecture/screens/profile_screen.dart';
@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:  const ControlNavigationbar(),
+      debugShowCheckedModeBanner: false,
+      home:  const MainNavigationController(),
       routes: {
         '/HomeScreen': (context) => const  HomeScreen(),
         '/ActivityScreen': (context) => const ActivityScreen(),

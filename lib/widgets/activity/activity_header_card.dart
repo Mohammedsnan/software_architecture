@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class ActivtyHeadeerModel extends StatelessWidget {
-  const ActivtyHeadeerModel({super.key});
+class ActivityHeaderCard extends StatelessWidget {
+  const ActivityHeaderCard({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
-      width: 400,
-      padding: EdgeInsets.all(7),
+      width: double.infinity,
+      margin: const EdgeInsets.all(1.0),
+      padding: const EdgeInsets.all(14.0),
       decoration: BoxDecoration(
         color: Color(0xFFFF9E67),
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15),bottomRight: Radius.circular(15)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

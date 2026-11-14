@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:software_architecture/screens/activity_screen.dart';
 import 'package:software_architecture/screens/home_screen.dart';
 import 'package:software_architecture/screens/profile_screen.dart';
-class ControlNavigationbar extends StatefulWidget {
-  const ControlNavigationbar({super.key});
+class MainNavigationController extends StatefulWidget {
+  const MainNavigationController({super.key});
 
   @override
-  State<ControlNavigationbar> createState() => _ControlNavigationbarState();
+  State<MainNavigationController> createState() => _ControlNavigationbarState();
 }
 
-class _ControlNavigationbarState extends State<ControlNavigationbar>
+class _ControlNavigationbarState extends State<MainNavigationController>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   int _selectedIndex = 0;

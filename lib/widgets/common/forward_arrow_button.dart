@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
-class BackListModel extends StatelessWidget {
-  const BackListModel({
+class ForwardArrowButton extends StatelessWidget {
+  const ForwardArrowButton({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(8),
+      padding: EdgeInsets.all(1),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: Colors.white.withOpacity(0.1),
       ),
       child: Container(
-        height: 20,
-        width: 20,
+        height: 40,
+        width: 40,
         decoration: BoxDecoration(
           color: Colors.black ,
           borderRadius: BorderRadius.circular(5)

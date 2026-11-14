@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class HomeSearchModel extends StatelessWidget {
-  const HomeSearchModel({super.key});
+class HomeSearchBar extends StatelessWidget {
+  const HomeSearchBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,26 +30,26 @@ class HomeSearchModel extends StatelessWidget {
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 14.0,
-                    vertical: 6.0,
+                    horizontal: 6.0,
+                    vertical: 11.0,
                   ),
                   decoration: BoxDecoration(
-                    color: Color(0xFFFF9E67),
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                   child: Row(
                     children: [
-                      Icon(Icons.access_time, color: Colors.white, size: 16.0),
+                      Icon(Icons.access_time, color: Colors.black, size: 16.0),
                       SizedBox(width: 6.0),
                       Text(
                         'Now',
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 13.0,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Icon(Icons.keyboard_arrow_down, color: Colors.white, size: 18.0),
+                      Icon(Icons.keyboard_arrow_down, color: Colors.black, size: 18.0),
                     ],
                   ),
                 ),

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:software_architecture/models/bachLlstmodel.dart';
-class ActivityListViewModel extends StatelessWidget {
-  const ActivityListViewModel({
-    super.key,
+import 'package:software_architecture/data/activitices_data.dart';
+import 'package:software_architecture/widgets/common/forward_arrow_button.dart';
+class ActivityListSection extends StatelessWidget {
+  const ActivityListSection({
+    super.key ,
   });
-
+  
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -12,10 +13,10 @@ class ActivityListViewModel extends StatelessWidget {
       child: ListView.builder(
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
-        itemCount: 3,
+        itemCount: ActiviticesList.length,
         itemBuilder: (context, index) {
           return Container(
-            height: 100,
+            height: 80,
             margin: EdgeInsets.all(5),
             padding: EdgeInsets.only(bottom: 10),
             decoration: BoxDecoration(
@@ -29,14 +30,14 @@ class ActivityListViewModel extends StatelessWidget {
                   Container(
                     height: 50,
                     width: 50,
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.all(2),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.white.withOpacity(0.1),
                     ),
                     child: ClipOval(
                       child: Image.network(
-                        "https://example.com/image.jpg",
+                        ActiviticesList[index].imsgeUil,
                         fit: BoxFit.cover,
                         errorBuilder: (context, error, stackTrace) {
                           return const Icon(
@@ -55,7 +56,7 @@ class ActivityListViewModel extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          'Zaporizke Hwy 40 ',
+                          ActiviticesList[index].title,
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
@@ -65,14 +66,14 @@ class ActivityListViewModel extends StatelessWidget {
                         ),
                         SizedBox(height: 12),
                         Text(
-                          'Aug 24 • 7:10 PM',
+                          ActiviticesList[index].time,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 10,
                           ),
                         ),
                         Text(
-                          'UAH 0.00',
+                          ActiviticesList[index].supTitle,
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w600,
@@ -83,7 +84,7 @@ class ActivityListViewModel extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 12),
-                  BackListModel()
+                  ForwardArrowButton()
                 ],
               ),
             ),
